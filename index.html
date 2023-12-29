@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prajwal Kumar - Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to right, #ff6ec4, #7873f5); */
+  background-image: url(https://images.pexels.com/photos/1910225/pexels-photo-1910225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+header {
+  background-image: url('./images/bgcover.jpg');
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Added justify-content to evenly distribute items */
+  background-color: #008080;
+  padding: 14px;
+  height: 50px; /* Set a fixed height for the navbar */
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter: brightness(1.5);
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: #fff;
+  position: relative;
+}
+
+nav a:hover {
+  background: #07eec7;
+  border: 2px solid rgb(0, 210, 217);
+  color: rgb(25, 3, 11);
+  border-radius: 20px;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+
+    section {
+      padding: 20px;
+      transition: background 0.3s ease;
+      height: 400px; /* Set a fixed height for the sections */
+      display: none; /* Hide sections by default */
+    }
+
+    section:hover {
+      /* background: linear-gradient(135deg, #6B3E85, #3F8CCD); */
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .profile-image {
+  width: 80px; /* Adjust the width to your preference */
+  height: 80px; /* Adjust the height to your preference */
+  border-radius: 50%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #a6e7ff, #0057ab);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image img {
+  width: 60px; /* Adjust the width of the image */
+  height: 60px; /* Adjust the height of the image */
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+    h1:hover {
+      color: gold;
+      cursor: pointer;
+      text-shadow: 2px 2px 4px rgba(255, 165, 0, 0.8);
+    }
+    h2:hover{
+      text-decoration: underline;
+      transition: text-decoration 0.8s ease;
+    }
+
+    .txt{
+      text-align: justify;
+      max-width: 1200px;
+    }
+
+    p {
+      color: #F8F8F8;
+      font-weight: 600;
+    }
+
+   
+
+
+
+    .imgAbout{
+      float: right;
+      margin-top: 23px;
+    }
+    .imgAbout:hover{
+      cursor: pointer;
+      filter: brightness(1.2);
+    }
+
+    .projectImg{
+      float: right;
+      margin-top: -70px;
+      filter: brightness(1.1);
+      transition: transform 0.5s ease, filter 0.5s ease;;
+
+      
+    }
+    .projectImg:hover{
+      float: right;
+      margin-top: -70px;
+      filter: brightness(1.2);
+      transform: scale(1.1); 
+      
+    }
+
+    .imgImac:hover{
+      filter: brightness(1.2);
+      margin-top: 20px;
+    }
+
+    .imgImac{
+     position: relative;
+     bottom: -120px;
+
+    }
+
+    #contact {
+  margin-bottom: 100px; /* Adjust margin-bottom to control spacing */
+  transition: margin-bottom 0.3s ease; /* Add a smooth transition effect */
+}
+
+.contact-img {
+  height: 210px;
+  width: 350px;
+  float: right;
+  margin-bottom: 0; /* Set margin-bottom to 0 initially */
+  filter: brightness(1.1);
+  transition: transform 0.5s ease, filter 0.5s ease; 
+}
+
+.contact-img:hover {
+  filter: brightness(1.2);
+  margin-bottom: 100px; /* Adjust margin-bottom to create space on hover */
+  transform: scale(1.1); 
+}
+
+.contact-img2 {
+  height: 210px;
+  width: 350px;
+ 
+  margin-bottom: 0; /* Set margin-bottom to 0 initially */
+  filter: brightness(1.1);
+  transition: transform 0.5s ease, filter 0.5s ease; 
+}
+
+.contact-img2:hover {
+  filter: brightness(1.2);
+  margin-bottom: 100px; /* Adjust margin-bottom to create space on hover */
+  transform: scale(1.1); 
+}
+
+.pokemonImg {
+  height: 260px;
+  width: 300px;
+  position: relative;
+  top: 70px;
+  right: 10px;
+  transition: transform 0.5s ease, filter 0.5s ease; /* Adjust the duration for a slower zoom effect */
+  
+}
+
+.pokemonImg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent 20%, #ff0000 80%);
+  opacity: 0;
+  animation: fireEffect 1s infinite alternate; /* Adjust animation duration and properties */
+}
+
+.pokemonImg:hover{
+  filter: brightness(1.1);
+  transform: scale(1.1); 
+}
+
+
+.fire1{
+  position: absolute;
+  left: 52px;
+  top: 290px;
+}
+
+.flamePokemon {
+            height: 50px;
+            width: 80px;
+            position: relative;
+            left: 100px;
+            top: -75px;
+            filter: saturate(100%) hue-rotate(210deg);
+        }
+
+        .flamePokemon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: blue; /* Adjust the color as needed */
+            opacity: 0.5; /* Adjust the opacity as needed */
+        }
+
+      
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- <header>
+    <img class="profile-image" src="./images/praj 07bg3 (2).png" alt="Profile Image">
+    <h1>Prajwal Kumar</h1>
+    <p style="font-weight: bold; font-size: 16px;">Web Developer</p>
+  </header> -->
+
+  <nav>
+    <video src="./videos/Black White and Green Modern Technology Animated Logo.mp4" autoplay muted loop class="logo" style="height: 50px; width: 60px; border-radius: 20%;">
+      Your browser does not support the video tag.
+    </video>
+    
+    <div style="flex-grow: 1;"></div>
+   
+    <a href="#home" onclick="showSection('home')">Home</a>
+    <a href="#about" onclick="showSection('about')">About me</a>
+    <a href="#projects" onclick="showSection('projects')">Projects</a>
+    <a href="#contact" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <section id="home" style="display: block;">
+    <!-- <span>HI, WE MAKE AMAZING WEBSITES</span> -->
+    <h1 style="text-align: center; font-size: 16px; color: gold; text-decoration: underline; font-style: italic;">Empowering Your Digital Presence with Expert Web Development</h1>
+    <h2>Home</h2>
+    <p>Hi, Welcome to my portfolio website. I am a Web Developer with 1 year of experience in the MERN stack.
+      <br> <br>
+    <p class="txt"> As a Web Developer, my passion lies in translating creative concepts into seamless and user-centric web solutions. I specialize in the MERN (MongoDB, Express.js, React.js, Node.js) technology stack. During my tenure as a Junior Research Fellow at NIT-K (National Institute of Technology, Karnataka), I made significant contributions to the development of Virtual Lab simulations. Proficient in HTML, CSS, and JavaScript, I focus on crafting dynamic and interactive user interfaces. Excited about pushing the boundaries of digital innovation, I bring enthusiasm and attention to detail, ensuring cutting-edge online experiences.</p> 
+    </p>
+    <img src="./images/webdev3-removebg-preview.png" alt="" style="height: 220px; width: 300px; float: right; margin-top: -90px;">
+    <img src="./images/icons8-drag-left.gif" alt="">
+    <img src="./images/pexels-andrea-piacquadio-927022.jpg" style="height: 200px; width: 300px; margin-top: -12px; border-radius: 10px;"  alt="">
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Name: Prajwal Kumar</p>
+    <p>Age: 28</p>
+    <p>Email: prajwalsalian65@gmail.com</p>
+    <p>Contact Number: +91-7204761907</p>
+    <p>Worked as a Junior Research Fellow at CSD Robocon NITK</p>
+    <img class="imgAbout" src="./images/praj 07bg2.png" alt="" style="height: 200px; width: 200px;">
+    <img class="imgImac" src="./images/imac4-rbg.png" alt="" style="height: 200px; width: 200px; float: right; margin-top: -80px;">
+  </section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p>Here are some of the projects I have worked on:</p>
+  <ul>
+    <li><a style="color: #ffffff; font-size: 18px; " href="https://github.com/PrajwalKumar07/Morse-Code-Alphabets.2.0">Project 1-MorseCode Alphabets Simulation</a></li>
+    <li><a style="color: #ffffff; font-size: 18px;" href="https://github.com/PrajwalKumar07/QuoteGeneratorMachine">Project 2 - Quote Generator Machine</a></li>
+    <li><a style="color: #ffffff; font-size: 18px;" href="#">Project 3 - Demo</a></li>
+  </ul>
+ 
+  <video class="flamePokemon" src="videos/stock-footage-fire-animated-emoji-alpha-channel-transparent-background-k-resolution-loop-animation.webm" style="height: 50px; width: 80px; position: relative; left: 100px; top: -75px; " autoplay loop infinite ></video>
+
+
+  <img class="pokemonImg" src="images/pkemon 5.1 edited.png" alt="" style="height: 220px; width: 350px;">
+  <img class="projectImg" src="./images/webdeveloper img.png" alt="" style="height: 220px; width: 350px;">
+  <img class="projectImg" src="./images/webdev2.jpg" alt="" style="height: 220px; width: 350px;">
+</section>
+
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me:</p>
+    <p>Email: prajwalsalian65@gmail.com</p>
+    <p>Contact Number: +91-7204761907</p>
+    <img class="contact-img2" src="./images/pexels-photo-3184416.jpeg" alt="" style="height: 220px; width: 350px;">
+    <img class="contact-img" src="./images/contact img.png" alt="">
+  </section>
+  
+
+  <footer>
+    <p>Work Experience: 1 year | Job: Web Developer (MERN)</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).style.display = 'block';
+
+      // Smoothly scroll to the selected section
+      document.getElementById(sectionId).scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
+
+</body>
+
+</html>
